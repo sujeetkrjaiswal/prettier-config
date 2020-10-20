@@ -1,5 +1,5 @@
 {
-  "name": "prettier-config",
+  "name": "@winsome/prettier-config",
   "version": "1.0.0",
   "description": "Opinionated Sharable Prettier Config",
   "keywords": [
