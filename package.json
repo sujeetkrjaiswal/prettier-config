@@ -1,0 +1,48 @@
+{
+  "name": "prettier-config",
+  "version": "1.0.0",
+  "description": "Opinionated Sharable Prettier Config",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "main": "index.json",
+  "scripts": {
+    "format": "prettier --write ./*"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": "./index.json",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujeetkrjaiswal/prettier-config.git"
+  },
+  "author": "Sujeet Kumar Jaiswal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujeetkrjaiswal/prettier-config/issues"
+  },
+  "homepage": "https://github.com/sujeetkrjaiswal/prettier-config#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.0",
+    "prettier": ">=2.1.2"
+  },
+  "peerDependencies": {
+    "prettier": ">=2.1.2"
+  }
+}
